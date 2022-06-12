@@ -1,1 +1,21 @@
-print("hello world!!!")
+# basic fastapi application
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/") # this is an endpoint -> is user come to this endpoint, this function return {message: ...}
+def home():
+    return {"message": "hello world from app.py"}
+
+@app.get("/test") # this is an endpoint
+def test(): # if user come to /test -> message will be returned
+    return {"message": "test"}
+
+@app.get("/test/hello")
+def test():
+    return {"message": "test/hello"}
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app)

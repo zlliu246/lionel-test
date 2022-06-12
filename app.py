@@ -17,6 +17,10 @@ def test(): # if user come to /test -> message will be returned
 def test():
     return {"message": "test/hello"}
 
+@app.get('/2206121718_01/hello')
+def time_2206121718_01():
+    return {'12 June 1718HRs': 'helloing at 12 Jun 5.18pm'}
+
 if __name__ == '__main__':
     import uvicorn
     uvicorn.run(app)

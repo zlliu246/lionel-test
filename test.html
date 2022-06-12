@@ -1,0 +1,21 @@
+<!-- this is javascript -->
+<script> 
+
+test = async () => {
+    console.log("button has been clicked")
+
+    let response = await fetch("http://localhost:8000")
+    let myjson = await response.json()
+
+    console.log(myjson)
+
+}
+
+</script>
+
+<!-- This is html -->
+
+<h1>This is a test file</h1>
+
+<button onclick="test()">Click me</button>
+
